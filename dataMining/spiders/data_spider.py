@@ -18,11 +18,11 @@ class DataSpider(scrapy.Spider):
             dataList = item.css('div.item-facets::text').extract()
 
 
-            if(len(dataList)==4):
+            if(len(dataList)>=4):
                 propertyType = dataList[3]
             else:
                 propertyType = "None"
-            if(len(dataList)==3):
+            if(len(dataList)>=3):
                 subCategory = dataList[2]
             else:
                 subCategory = "None"
